@@ -1,0 +1,21 @@
+body{
+    background-image:url("bgimage.jpg.jpeg");
+    background-size: cover;
+    height: 1500px;
+    width: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.logo-img
+{
+    mix-blend-mode: color-burn;
+    transform: translate(70%,60%);
+    width: 2200px;
+    height: 1900px
+    margin-left: 400px;
+    margin-top: -1000px;
+    
+}

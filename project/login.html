@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-image: url("cafe.jpg");
+            height: 100vh; 
+            width: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            filter: brightness(70%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .form-area {
+            width: 500px;
+            height: 200px;
+            max-width: 800px;
+            border: 1px solid #421212;
+            border-radius: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            gap: 10px;
+            position: fixed;
+    
+            justify-content: center;
+        
+            align-items: center;
+            display: block;
+        
+        }
+        .form-area:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+        }
+        input {
+            width: 100%;
+            max-width: 360px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border-color: #800598;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            max-width: 360px;
+            background-color: #800598;
+            border: 2px solid transparent;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            transition: background-color 0.3s, border 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: transparent;
+            border: 2px solid #800598;
+            color: #000;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #800598;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #421212;
+        }
+        @media (max-width: 600px) {
+            .form-area {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-area">
+            <form action="logginn3.html" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name" required>
+            <br><br>
+            <label for="password">Password</label>
+            
+            <input type="password" id="password" placeholder="Password" required>
+            <!--<button type="submit">Login</button>-->
+            <a href="logginn3.html">Login</a>
+        </form>
+    </div>
+</body>
+</html>

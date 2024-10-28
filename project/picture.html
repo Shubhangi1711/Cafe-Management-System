@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+    <link rel="stylesheet" href="style22.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Cafe Menu</h1>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="coffee.jpg">
+                <h2>Coffee</h2>
+                <p>$3.00</p>
+                <button onclick="addToCart('Coffee', 3.00)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="fries (1).jpg">
+                <h2>Fries</h2>
+                <p>$4.50</p>
+                <button onclick="addToCart('Fries', 4.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="sandwich.webp">
+                <h2>Sandwich</h2>
+                <p>$50.00</p>
+                <button onclick="addToCart('Sandwich', 5.00)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="rolls.webp">
+                <h2>Veg Rolls</h2>
+                <p>$6.50</p>
+                <button onclick="addToCart('Veg Rolls', 6.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="maggi (1).avif">
+                <h2>Maggiee</h2>
+                <p>$6.80</p>
+                <button onclick="addToCart('Maggiee', 6.80)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="apetizer1.webp">
+                <h2>Apetizers</h2>
+                <p>$8.50</p>
+                <button onclick="addToCart('Apetizers', 8.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="sushi.jpg">
+                <h2>Sushi</h2>
+                <p>$6.00</p>
+                <button onclick="addToCart('Sushi', 6.00)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="twister.jpg">
+                <h2>Twister</h2>
+                <p>$4.00</p>
+                <button onclick="addToCart('Twister', 4.00)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="whitepasta (1).jpg">
+                <h2>White-Sauce Pasta</h2>
+                <p>$8.50</p>
+                <button onclick="addToCart('White-Sauce Pasta', 8.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="noodles.jpg">
+                <h2>Noodles</h2>
+                <p>$3.40</p>
+                <button onclick="addToCart('Noodles', 3.40)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="nachos.jpg">
+                <h2>Nachos</h2>
+                <p>$4.80</p>
+                <button onclick="addToCart('Nachos', 4.80)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="momos (1).jpg">
+                <h2>Momos</h2>
+                <p>$5.20</p>
+                <button onclick="addToCart('Momos', 5.20)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="pizza1.jpg">
+                <h2>Pizza</h2>
+                <p>$9.50</p>
+                <button onclick="addToCart('Pizza', 9.50)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="redpasta.avif">
+                <h2>Red-Sauce Pasta</h2>
+                <p>$7.00</p>
+                <button onclick="addToCart('Red-Sauce Pasta', 7.00)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="burger.jpg">
+                <h2>Burger</h2>
+                <p>$8.20</p>
+                <button onclick="addToCart('Burger', 8.20)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="nuggets.avif">
+                <h2>Nuggets</h2>
+                <p>$4.30</p>
+                <button onclick="addToCart('Nuggets', 4.30)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="milkshake.png">
+                <h2>Milk-Shake</h2>
+                <p>$4.00</p>
+                <button onclick="addToCart('Milk-Shake', 4.00)">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="mojito (1).jpg">
+                <h2>Mojito</h2>
+                <p>$4.80</p>
+                <button onclick="addToCart('Mojito', 4.80)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: $<span id="totalPrice">0.00</span></p>
+        <button class="place-order-button" onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <!-- Order Form Modal -->
+    <div id="orderFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderForm()">&times;</span>
+            <h2>Order Details</h2>
+            <form id="orderForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+                
+                <button type="button" onclick="submitOrder()">Submit Order</button>
+            </form>
+        </div>
+    </div>
+    <script src="script41.js"></script>
+    <!-- Centered Button Container -->
+    <div class="center-button">
+        <input type="button" class="about button" value="click here to know about us" onclick="window.location.href='about.html'">
+    </div>
+    <!--<script src="script41.js"></script>-->
+   
+</body>
+</html>
